@@ -33,7 +33,7 @@ class AdminController{
         $consulta .= " ON citas_servicios.citaId=citas.id ";
         $consulta .= " LEFT OUTER JOIN servicios ";
         $consulta .= " ON servicios.id=citas_servicios.servicioId ";
-        $consulta .= " WHERE fecha =  '${fecha}' ";
+        $consulta .= " WHERE fecha =  '$fecha' ";
 
         $citas = AdminCita::SQL($consulta);
 
